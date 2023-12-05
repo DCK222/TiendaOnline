@@ -25,22 +25,59 @@ const title = "Tienda Gorras";
     </div>
   </div>
   
-  <div id="contendorservicios">
-    <h1>Nuestros Servicios. </h1>
-    <div id="servicios">
-
-        <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
-        </span>
+  <section class="page-section" id="servicios">
+    <div class="container">
+        <div id="nuestrosservicios" class="text-center">
+            <h2 class="section-heading text-uppercase">Nuestros Servicios</h2>
+            <h3 id="idgorras" class="section-subheading text-muted"> Gorras que Hablan por Ti</h3>
+        </div>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-car fa-stack-1x fa-inverse"></i>
+                </span>
+                <img width="180px" src="public/Captura_de_pantalla_2023-12-05_221041-removebg-preview.png" alt="">
+                <h4 class="my-3">Envíos en de 48 Horas</h4>
+                <p class="text-muted">Descubre la eficiencia de nuestros servicios de envío exprés que te garantizan la entrega de tus paquetes en menos de 48 horas.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-cogs fa-stack-1x fa-inverse"></i>
+                </span>
+                <img width="180px" src="public/Captura_de_pantalla_2023-12-05_221125-removebg-preview.png" alt="">
+                <h4 class="my-3">Envíos Internacionales Sin Fronteras</h4>
+                <p class="text-muted">Conquista nuevos horizontes con nuestros servicios de envíos internacionales. En DcKap, facilitamos el proceso de enviar tus productos a cualquier rincón del mundo.</p>
+            </div>
+            <div class="col-md-4">
+                <span class="fa-stack fa-4x">
+                    <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
+                </span>
+                <img width="180px" src="public/Captura_de_pantalla_2023-12-05_221333-removebg-preview.png" alt="">
+                <h4 class="my-3">Garantía de Calidad en Cada Envío:</h4>
+                <p class="text-muted">En DcKap, la satisfacción del cliente es nuestra prioridad. Nos comprometemos a ofrecer un servicio de envío que cumple con los más altos estándares de calidad.</p>
+            </div>
+        </div>
     </div>
-
-  </div>
+</section>
 </Layout>
 
 <style>
     body{
         overflow: auto;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #servicios{
+      margin-top: 3%;
+    }
+    #nuestrosservicios{
+      margin-bottom: 4%;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    #idgorras{
+      font-size: 20px;
     }
     /* Estilos para el Header */
   #imagenbanner {
@@ -59,13 +96,13 @@ const title = "Tienda Gorras";
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: fixed;
     width: 100%;
     z-index: 1000;
+    
   }
   #titulo {
     color: aliceblue;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-style: bold;
     margin-top: 2%;
   }
