@@ -10,15 +10,15 @@ import Tarjeta from "../components/tarjeta.astro";
       <h1>Estilo que se lleva en la cabeza</h1>
     </div>
     <div id="imagenbanner">
-      <img
+      <img id="gorra1"
         src="assets/398956637_1102980074024756_4853971165764625905_n-removebg-preview.png"
         alt=""
       />
-      <img
+      <img id="gorra2"
         src="assets/399612496_964406625107674_1790441146020002730_n-removebg-preview.png"
         alt=""
       />
-      <img
+      <img 
         src="assets/403944023_861170019091750_7956794222111924417_n-removebg-preview.png"
         alt=""
       />
@@ -168,6 +168,16 @@ import Tarjeta from "../components/tarjeta.astro";
         #imagenbanner{
             flex-direction: column;
         }
+        #gorra1, #gorra2 {
+  display: none;
+}
+#contenedortarjetas{
+  width: 100%;
+  
+}
+#contenedortarjetas > div {
+    width: calc(70% - 20px); /* Cambia el ancho para que sean dos tarjetas por fila */
+  }
     }
   /* ------------------------------------------------------- */
   #contendorservicios{
