@@ -3,47 +3,69 @@
 
 
  
-        <header>
-            <div>
-                <h1>DCKAP</h1>
-                <!-- <img src="tu_logo.png" alt="Logo"> -->
-            </div>
-            <nav>
-                <a href="#">Tipo</a>
-                <a href="#">Marcas</a>
-                <a href="#">Modelos</a>
-                <a href="#">Sexo</a>
-                <button type="button" class="btn btn-warning">Warning</button>
-            </nav>
-        </header>
+<header>
+    <div id="logo">
         
+        <img width="60px" src="public/logo.png" alt="Logo">
+    </div>
+    <nav>
+        <a href="node">Node.Js</a>
+        <a href="express">Express</a>
+        <button  href="#" type="button" class="btn btn-primary"> <a href="#"> Home </a></button>
+    </nav>
+</header>
+<style>
+ body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    margin-top: 70px;
+   
+}
 
-    <style>
+header {
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Establece la posición fija */
+    top: 0; /* Lo coloca en la parte superior de la ventana del navegador */
+    width: 100%; /* Ocupa el ancho completo de la ventana */
+    z-index: 1000; /* Asegura que esté en la capa superior */
+    
+}
+#logo{
+    margin-left: 1%;
+}
+
+nav {
+    display: flex;
+      
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin: 10px 20px;
+    font-weight: bold;
+}
+
+#AbrirNode {
+    background-color: #33333300;
+    border: 2px solid rgba(255, 204, 0, 0);
+    border-radius: 10px;
+}
+
+#AbrirExpress {
+    background-color: #33333300;    
+    border: 2px solid rgba(255, 204, 0, 0);
+    border-radius: 10px;
+}
+
+/* Agrega un margen superior al cuerpo para compensar el área ocupada por el encabezado fijo */
+body {
+    margin-top: 70px;
+}
+</style>
        
-       body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav {
-            display: flex;
-           
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px 20px;
-            font-weight: bold;
-        }
-    </style>

@@ -1,11 +1,93 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/header.astro';
-const title = "Tienda Gorras"
+import Layout from "../layouts/Layout.astro";
+const title = "Tienda Gorras";
+
 ---
 
 <Layout {title}>
-	
+  <div id="banner">
+    <div id="titulo">
+      <h1>Estilo que se lleva en la cabeza</h1>
+    </div>
+    <div id="imagenbanner">
+      <img
+        src="/public/398956637_1102980074024756_4853971165764625905_n-removebg-preview.png"
+        alt=""
+      />
+      <img
+        src="/public/399612496_964406625107674_1790441146020002730_n-removebg-preview.png"
+        alt=""
+      />
+      <img
+        src="/public/403944023_861170019091750_7956794222111924417_n-removebg-preview.png"
+        alt=""
+      />
+    </div>
+  </div>
+  
+  <div id="contendorservicios">
+    <h1>Nuestros Servicios. </h1>
+    <div id="servicios">
+
+        <span class="fa-stack fa-4x">
+            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+            <i class="fas fa-wrench fa-stack-1x fa-inverse"></i>
+        </span>
+    </div>
+
+  </div>
 </Layout>
 
-
+<style>
+    body{
+        overflow: auto;
+    }
+    /* Estilos para el Header */
+  #imagenbanner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  #banner {
+    background: linear-gradient(
+      rgb(17, 24, 39),
+      rgb(88, 28, 135),
+      rgb(124, 58, 237)
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  #titulo {
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: bold;
+    margin-top: 2%;
+  }
+  @media (max-width: 900px) {
+        /* Estilos específicos para pantallas con ancho máximo de 600px (típicamente, dispositivos móviles) */
+        #imagenbanner{
+            flex-direction: column;
+        }
+    }
+  /* ------------------------------------------------------- */
+  #contendorservicios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  #servicios{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
