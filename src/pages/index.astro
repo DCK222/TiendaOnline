@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 const title = "Tienda Gorras";
 import Tarjeta from "../components/tarjeta.astro";
+import Categorias from "../components/categorias.astro"
 ---
 
 <Layout {title}>
@@ -88,6 +89,46 @@ import Tarjeta from "../components/tarjeta.astro";
     </div>
   </div>
 </div>
+
+
+</section>
+<section >
+  <div id="nuestroproductos">
+  <h2 id="tituloproductos">Tipos de Gorras :</h2>
+  </div>
+  <div id="contenedormaintarjetas">
+  <div id="contenedortarjetas">
+    <div id="">
+      <Categorias />
+    </div>
+    <div id="">
+      <Categorias />
+    </div>
+    <div id="">
+      <Categorias />
+    </div>
+  </div>
+</div>
+
+
+</section>
+<section id="fotosinsta">
+  <div id="nuestroproductos">
+    <h2 id="tituloproductos">Fotos Instagram</h2>
+    </div>
+    <div id="contenedormaintarjetas">
+    <div id="contenedortarjetas">
+      <img width="300px" src="public/assets/369877562_1416346055585250_3145208483507793088_n.jpg" alt="">
+      <img width="300px" src="public/assets/405794255_3554907144794427_3552658486012645399_n.jpg" alt="">
+      <img width="300px" src="public/assets/399301868_6714830661939302_851356774131000075_n.jpg" alt="">
+      <img width="300px" src="public/assets/404899353_6961098817269303_9184545502354441663_n.jpg" alt="">
+      <img width="300px" src="public/assets/401719860_712656097416152_8340593792565260024_n.jpg" alt="">
+      <img width="300px" src="public/assets/402900069_658998969713979_5866725274371971009_n.jpg" alt="">
+      <img width="300px" src="public/assets/403870462_6765827910120515_50628714442493670_n.jpg" alt="">
+      <img width="300px" src="public/assets/404656769_1057614085661343_7750288183228582176_n.jpg" alt="">
+      </div>
+    </div>
+  </div>
 </section>
 </Layout>
 
@@ -164,7 +205,7 @@ import Tarjeta from "../components/tarjeta.astro";
     margin-top: 2%;
   }
   @media (max-width: 900px) {
-        /* Estilos específicos para pantallas con ancho máximo de 600px (típicamente, dispositivos móviles) */
+       
         #imagenbanner{
             flex-direction: column;
         }
@@ -179,9 +220,16 @@ import Tarjeta from "../components/tarjeta.astro";
   width: 300px;
 }
 #contenedortarjetas > div {
-    width: calc(65% - 20px); /* Cambia el ancho para que sean dos tarjetas por fila */
+    width: calc(65% - 20px);
   }
     }
+  #nuestroproductos{
+    margin-bottom: 3%;
+    margin-top: 3%;
+  }
+  #fotosinsta{
+    margin-bottom: 5%;
+  }
   /* ------------------------------------------------------- */
   #contendorservicios{
     display: flex;
