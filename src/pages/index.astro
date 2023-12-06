@@ -90,8 +90,20 @@ import Categorias from "../components/categorias.astro"
   </div>
 </div>
 
-
-</section>
+<section id="tiposdegorras">
+  <div id="nuestroproductos">
+    <h2 id="tituloproductos">Tipos de gorras</h2>
+    </div>
+    <div id="contenedormaintarjetas">
+    <div id="contenedortarjetastipos">
+      <img width="300px" src="assets/snapback_basic_332x332.webp" alt="">
+      <img width="300px" src="assets/Mesa_de_trabajo_6-100_332x332.webp" alt="">
+      <img width="300px" src="assets/curved_visor_332x332.webp" alt="">
+      <img width="300px" src="assets/6_panel_332x332.webp" alt="">
+      
+      </div>
+    </div>
+  </div>
 <section >
   <div id="nuestroproductos">
   <h2 id="tituloproductos">Tipos de Gorras :</h2>
@@ -130,6 +142,7 @@ import Categorias from "../components/categorias.astro"
     </div>
   </div>
 </section>
+
 </Layout>
 
 <style>
@@ -162,6 +175,13 @@ import Categorias from "../components/categorias.astro"
       justify-content: center;
       flex-wrap: wrap;
 
+    }
+    #contenedortarjetastipos{
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
     #contenedortarjetas > div {
   width: calc(33.33% - 20px); /* Ajusta el ancho según tus preferencias y considera el margen entre las tarjetas */
