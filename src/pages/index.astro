@@ -18,7 +18,7 @@ import Tarjeta from "../components/tarjeta.astro";
         src="assets/399612496_964406625107674_1790441146020002730_n-removebg-preview.png"
         alt=""
       />
-      <img 
+      <img id="gorra3" 
         src="assets/403944023_861170019091750_7956794222111924417_n-removebg-preview.png"
         alt=""
       />
@@ -168,15 +168,18 @@ import Tarjeta from "../components/tarjeta.astro";
         #imagenbanner{
             flex-direction: column;
         }
-        #gorra1, #gorra2 {
+        #gorra1{
   display: none;
 }
 #contenedortarjetas{
   width: 100%;
   
 }
+#gorra2, #gorra3{
+  width: 300px;
+}
 #contenedortarjetas > div {
-    width: calc(70% - 20px); /* Cambia el ancho para que sean dos tarjetas por fila */
+    width: calc(65% - 20px); /* Cambia el ancho para que sean dos tarjetas por fila */
   }
     }
   /* ------------------------------------------------------- */
