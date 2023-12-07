@@ -1,5 +1,5 @@
 ---
-const {img,contenido,titulo} = Astro.props;
+const {img,contenido,titulo,precio} = Astro.props;
 ---
 
 <div id="tarjeta" class="tarjeta">
@@ -7,13 +7,30 @@ const {img,contenido,titulo} = Astro.props;
     <div id="contenido" class="contenido">
       <h3 id="titulo" class="titulo">{titulo}</h3>
       <p>{contenido}</p>
+      <div id="seciconcarrito">
+      <h3 id="precio">{precio}</h3>
+      <button id="botoncarro"><img width="25px" src="assets/carro-de-la-carretilla (1).png" alt=""></button>
+    </div>
     </div>
   </div>
   <style>
+    #botoncarro{
+      background-color: rgba(240, 248, 255, 0);
+      border: 0 rgba(0, 0, 0, 0);
+    }
+    #seciconcarrito{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #precio{
+      color: red;
+      font-weight: bold;
+    }
     #tarjeta{
         width: auto;
         height: auto;
-      border: 1px solid #000000;
+    
       border-radius: 8px;
       overflow: hidden;
       margin: 20px;

@@ -70,24 +70,24 @@ import Categorias from "../components/categorias.astro"
   <div id="contenedormaintarjetas">
   <div id="contenedortarjetas">
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/193234074845_1.avif" titulo="47 Brand" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - 47 Brand" precio="39,40" />
     </div>
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/888588601860_1.avif" titulo="Brixton" contenido="Crest Black Adjustable - Brixton" precio="29,90" />
     </div>
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/4063633086694_1.avif" titulo="Stetson" contenido="Trucker Cap Malibu Khaki Trucker - Stetson" precio="20,99" />
     </div>
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/GCP2310288_1.avif" titulo="New Era" contenido="Hatstore Exclusive x New York Yankees" precio="35,40" />
     </div>
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/HS1013023_1.avif" titulo="47 Brand" contenido="Los Angeles Dodgers 47 Mvp" precio="27,40" />
     </div>
     <div id="">
-      <Tarjeta />
+      <Tarjeta img="assets/gorras/HS2123894_1.avif" titulo="47 Brand" contenido="Pittsburgh Pirates Sure Shot Mvp Black Adjustable" precio="30,90" />
     </div>
-    <button ><a href="paginasgorras/todasgorras">Ver Todos</a></button>
+    <button id="botonvertodos" type="button" class="btn btn-primary"> <a href="#">Ver Todos</a></button>
   </div>
 </div>
 
@@ -107,20 +107,20 @@ import Categorias from "../components/categorias.astro"
   </div>
 <section >
   <div id="nuestroproductos">
-  <h2 id="tituloproductos">Tipos de Gorras :</h2>
+  <h2 id="tituloproductos">Marcas de Gorras :</h2>
   </div>
   <div id="contenedormaintarjetas">
   <div id="contenedortarjetas">
     <div id="">
-      <Categorias />
+      <Categorias img="public/assets/marcas/new-era-logo.svg" titulo="New Era" />
     </div>
     <div id="">
-      <Categorias />
+      <Categorias img="public/assets/marcas/the-north-face-logo.svg" titulo="TheNorthFace"/>
     </div>
     <div id="">
-      <Categorias />
+      <Categorias img="public/assets/marcas/goorin-bros-inc-logo-vector.svg" titulo="Goorin Bros"/>
     </div>
-    <button>Ver Todos</button>
+   
   </div>
   
 </div>
@@ -149,6 +149,15 @@ import Categorias from "../components/categorias.astro"
 </Layout>
 
 <style>
+  
+  #botonvertodos{
+
+    color: aliceblue;
+  }
+  #botonvertodos a {
+        text-decoration: none;
+        color: inherit; /* Puedes usar 'inherit' para heredar el color del texto del botón */
+    }
     body{
         overflow: auto;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
