@@ -1,8 +1,12 @@
+---
+const {img,contenido,titulo} = Astro.props;
+---
+
 <div id="tarjeta" class="tarjeta">
-    <img id="imagen" class="imagen" src="assets/398956637_1102980074024756_4853971165764625905_n-removebg-preview.png" alt="Imagen de la tarjeta">
+    <img id="imagen" class="imagen" src={img} alt="Imagen de la tarjeta">
     <div id="contenido" class="contenido">
-      <h3 id="titulo" class="titulo">Título de la Tarjeta</h3>
-      <p>Contenido de la tarjeta. Puedes agregar más información aquí.</p>
+      <h3 id="titulo" class="titulo">{titulo}</h3>
+      <p>{contenido}</p>
     </div>
   </div>
   <style>
