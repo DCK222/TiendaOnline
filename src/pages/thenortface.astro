@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Productos";
+import Tarjeta from "../components/tarjeta.astro";
+import Categorias from "../components/categorias.astro"
+---
+<Layout {title}>
+
+    <section>
+        <div id="nuestroproductos">
+          <h2 id="tituloproductos">Nuestros Productos :</h2>
+        </div>
+        <div id="contenedormaintarjetas" class="tarjetas-flex">
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/680975362725_1.avif" titulo="The North Face" contenido="Recycled 66 Classic Hat Black Adjustable - The North Face" precio="26,99" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196573241923_1.avif" titulo="The North Face" contenido="Recycled 66 Classic Hat Pink Moss Adjustable - The North Face" precio="31,99" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196573241831_1.avif" titulo="The North Face" contenido="Recycled 66 Classic Dark Sage/Mist Sage Adjustable - The North Face" precio="31,99" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196573241725_1.avif" titulo="The North Face" contenido="Hatstore Exclusive x New York Yankees" precio="35,40" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196573138254_1.avif" titulo="The North Face" contenido="Los Angeles Dodgers 47 Mvp" precio="27,40" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/193391978635_1.avif" titulo="The North Face" contenido="Pittsburgh Pirates Sure Shot Mvp Black Adjustable" precio="30,90" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/193391980133_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="25.90" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/193391980898_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="19,99" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/195437275951_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="19,90" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196011600718_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="49,99" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196247076370_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="25,90" />
+          </div>
+          <div>
+            <Tarjeta img="assets/gorras/thenorthface/196573136038_1.avif" titulo="The North Face" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - The North Face" precio="19,40" />
+          </div>
+        </div>
+        <!-- <button id="botonvertodos" type="button" class="btn btn-primary"> <a href="todasgorras">Ver Todos</a></button> -->
+      </section>
+      
+      <style>
+        #nuestroproductos {
+          width: 70%;
+        }
+      
+        #contenedormaintarjetas {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 20px; /* Espacio entre tarjetas */
+        }
+      
+        #contenedormaintarjetas > div {
+          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+        }
+      
+        @media (max-width: 767px) {
+          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          #contenedormaintarjetas > div {
+            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+          }
+        }
+      </style>
+</Layout>

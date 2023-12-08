@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Productos";
+import Tarjeta from "../components/tarjeta.astro";
+import Categorias from "../components/categorias.astro"
+---
+<Layout {title}>
+
+    <section>
+        <div id="nuestroproductos">
+          <h2 id="tituloproductos">Nuestros Productos :</h2>
+        </div>
+        <div id="contenedormaintarjetas" class="tarjetas-flex">
+            <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625451028_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Black Adjustable - Goorin Bros" precio="26,99" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625460297_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Pink Moss Adjustable - Goorin Bros" precio="31,99" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625467524_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Dark Sage/Mist Sage Adjustable - Goorin Bros" precio="31,99" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625469399_1.avif" titulo="Goorin Bros" contenido="Hatstore Exclusive x New York Yankees" precio="35,40" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625471187_1.avif" titulo="Goorin Bros" contenido="Los Angeles Dodgers 47 Mvp" precio="27,40" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625499600_1.avif" titulo="Goorin Bros" contenido="Pittsburgh Pirates Sure Shot Mvp Black Adjustable" precio="30,90" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625500672_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="25.90" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625502126_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="19,99" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625515669_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="19,90" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625533687_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="49,99" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/090625555870_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="25,90" />
+              </div>
+              <div>
+                <Tarjeta img="assets/gorras/goorinbros/HS1016836_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="19,40" />
+              </div>
+        </div>
+        <!-- <button id="botonvertodos" type="button" class="btn btn-primary"> <a href="todasgorras">Ver Todos</a></button> -->
+      </section>
+      
+      <style>
+        #nuestroproductos {
+          width: 70%;
+        }
+      
+        #contenedormaintarjetas {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 20px; /* Espacio entre tarjetas */
+        }
+      
+        #contenedormaintarjetas > div {
+          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+        }
+      
+        @media (max-width: 767px) {
+          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          #contenedormaintarjetas > div {
+            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+          }
+        }
+      </style>
+</Layout>
