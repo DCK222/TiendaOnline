@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/Layout.astro";
+const title = "Productos";
+import Tarjeta from "../components/tarjeta.astro";
+import Categorias from "../components/categorias.astro";
+import TarjetaTienda from "../components/tarjetaTienda.astro";
+---
+<Layout {title}>
+
+    <section>
+        <div id="nuestroproductos">
+          <h2 id="tituloproductos">Productos Añadidos :</h2>
+        </div>
+        <div id="contenedormaintarjetas" class="tarjetas-flex">
+            <div>
+                <TarjetaTienda img="assets/gorras/goorinbros/090625451028_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Black Adjustable - Goorin Bros" precio="26,99" />
+              </div>
+              <div>
+                <TarjetaTienda img="assets/gorras/goorinbros/090625460297_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Pink Moss Adjustable - Goorin Bros" precio="31,99" />
+              </div>
+              <div>
+                <TarjetaTienda img="assets/gorras/goorinbros/090625467524_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Dark Sage/Mist Sage Adjustable - Goorin Bros" precio="31,99" />
+              </div>
+              
+              <h3>Total : 90,97</h3>
+              <button id="botonvertodos" type="button" class="btn btn-primary"> <a href="">Tramitar Pedido</a></button>
+        </div>
+        
+      </section>
+      
+      <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #botonvertodos{
+
+color: aliceblue;
+}
+#botonvertodos a {
+    text-decoration: none;
+    color: inherit; 
+}
+        #nuestroproductos {
+          width: 70%;
+          
+        }
+      
+        #contenedormaintarjetas {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 20px; /* Espacio entre tarjetas */
+          flex-direction:column;
+          margin-bottom:5%;
+        }
+      
+        #contenedormaintarjetas > div {
+          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+        }
+      
+        @media (max-width: 767px) {
+          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          #contenedormaintarjetas > div {
+            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+          }
+        }
+      </style>
+</Layout>

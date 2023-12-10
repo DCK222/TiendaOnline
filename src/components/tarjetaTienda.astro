@@ -1,0 +1,63 @@
+---
+const {img,contenido,titulo,precio} = Astro.props;
+---
+
+<div id="tarjeta" class="tarjeta">
+    <img id="imagen" class="imagen" src={img} alt="Imagen de la tarjeta">
+    <div id="contenido" class="contenido">
+      <h3 id="titulo" class="titulo">{titulo}</h3>
+      <p>{contenido}</p>
+      <div id="seciconcarrito">
+      <h3 id="precio">{precio}</h3>
+      <button id="botoncarro"><img width="25px" src="assets/eliminar.png" alt=""></button>
+    </div>
+    </div>
+  <style>
+    #botoncarro{
+      background-color: rgba(240, 248, 255, 0);
+      border: 0 rgba(0, 0, 0, 0);
+    }
+    #seciconcarrito{
+        display: flex;
+  align-items: center;
+  justify-content: space-between;
+    }
+    #precio{
+      color: red;
+      font-weight: bold;
+    }
+    #tarjeta{
+        width: auto;
+        height: auto;
+    
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center ;
+      flex-direction: column;
+
+    }
+    #imagen{
+        width:200px;
+      
+
+    }
+    #contenido{
+
+        padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    #titulo{
+        font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 900px) {
+    #imagen{
+        width: 250px;
+    }
+    }
+  </style>
