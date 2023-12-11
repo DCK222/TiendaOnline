@@ -14,26 +14,43 @@
         <div></div>
     </div>
     <nav id="menu">
-        <a href="newera">Marcas</a>
-        <a href="tipotrucker">Tipo</a>
+        <a href="newera" class="main-option">Marcas</a>
+        <div class="submenu marca-submenu">
+            <a href="newera">New Era</a>
+            <a href="thenorthface">North Face</a>
+            <a href="goorin">Goorin Bros</a>
+        </div>
+        <a href="tipotrucker" class="main-option">Tipo</a>
+        <div class="submenu tipo-submenu">
+            <a href="tipoplano">Tipo Plano</a>
+            <a href="tipoajustable">tipo Ajustable</a>
+            <a href="tipotrucker">Tipo Trucker</a>
+        </div>
         <a href="sobrenosotros">Sobre Nosotros</a>
         <a href="/">Home</a>
-        
-            <a href="tienda">
-                <img width="20px" src="assets/carro-de-la-carretilla (1).png" alt="Carrito">
-            </a>
-        
+        <a href="tienda">
+            <img width="20px" src="assets/carro-de-la-carretilla (1).png" alt="Carrito">
+        </a>
     </nav>
-</header>
 
-<!-- funcion que al hacer pequeño el menu icono se muestre -->
-<script lang="js">
-    document.getElementById('menu-icon').addEventListener('click', function () {
-        document.getElementById('menu').classList.toggle('show');
-    });
-</script>
+    <!-- funcion que al hacer pequeño el menu icono se muestre -->
+    <script lang="js">
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            document.getElementById('menu').classList.toggle('show');
+        });
+
+        // Añadir un evento para ocultar el submenú cuando el ratón sale del área del menú
+        document.getElementById('menu').addEventListener('mouseleave', function () {
+            // Ocultar el submenú después de un pequeño retraso (puedes ajustar el valor en milisegundos)
+            setTimeout(function () {
+                document.getElementById('menu').classList.remove('show');
+            }, 200);
+        });
+    </script>
 </header>
 <style>
+
+
   body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -88,6 +105,7 @@
             display: block;
         }
 
+        /* hacemos responsive */
         @media (max-width: 800px) {
             #menu {
                 display: none;
@@ -107,5 +125,36 @@
                 margin: 10px;
             }
         }
+
+        /* estilos para los submenus del header :  */
+        .submenu {
+        display: none;
+        position: absolute;
+        background-color: rgb(231, 231, 231);
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .main-option:hover + .submenu {
+        /* estilo para cuando salte la caja del hover */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .submenu a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+    }
+    .main-option:hover ~ .submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu:hover {
+    display: flex;
+    flex-direction: column;
+}
+
 </style>
        
