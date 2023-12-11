@@ -6,74 +6,106 @@
 <header>
     <!-- CREAMOS EL HEADER CON UN LOGO Y UN NAV CON BOTONES PARA LLEGAR A LAS SECCIONES -->
     <div id="logo">
-        <!-- IMAGEN DEL LOGO DENTRO DE CONTENEDOR -->
         <img width="60px" src="assets/logo.png" alt="Logo">
     </div>
-    <!-- NAV PARA LAS SECICONES DEL HEADER -->
-    <nav>
+    <div id="menu-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <nav id="menu">
         <a href="#marcasgorras">Marcas</a>
         <a href="#tiposdegorras">Tipo</a>
         <a href="express">Sobre Nosotros</a>
         <a href="/">Home</a>
-        <button type="button" class="btn btn-warnig"> <a href="tienda"> <img width="20px"; src="assets/carro-de-la-carretilla (1).png"></img> </a></button>
+        
+            <a href="tienda">
+                <img width="20px" src="assets/carro-de-la-carretilla (1).png" alt="Carrito">
+            </a>
+        
     </nav>
 </header>
+
+<!-- funcion que al hacer pequeño el menu icono se muestre -->
+<script>
+    document.getElementById('menu-icon').addEventListener('click', function () {
+        document.getElementById('menu').classList.toggle('show');
+    });
+</script>
+</header>
 <style>
- body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    margin-top: 70px;
-   
-}
+  body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            margin-top: 70px;
+        }
 
-header {
-    background-color: rgb(231, 231, 231);
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    z-index: 1000; 
-    
-}
-#logo{
-    margin-left: 1%;
-}
+        header {
+            background-color: rgb(231, 231, 231);
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            z-index: 1000;
+        }
 
-nav {
-    display: flex;
-      
-}
+        #logo {
+            margin-left: 1%;
+        }
 
-nav a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    margin: 10px 20px;
-    
-}
+        nav {
+            display: flex;
+        }
 
-#AbrirNode {
-    background-color: #33333300;
-    border: 2px solid rgba(255, 204, 0, 0);
-    border-radius: 10px;
-}
+        nav a {
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 10px 20px;
+        }
 
-#AbrirExpress {
-    background-color: #33333300;    
-    border: 2px solid rgba(255, 204, 0, 0);
-    border-radius: 10px;
-}
+        #menu-icon {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
+        #menu-icon div {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 3px 0;
+        }
 
-body {
-    margin-top: 70px;
-}
+        #menu {
+            display: flex;
+        }
 
-@media (max-width: 900px) {
+        #menu a {
+            display: block;
+        }
 
-}
+        @media (max-width: 800px) {
+            #menu {
+                display: none;
+                flex-direction: column;
+            }
+
+            #menu.show {
+                display: flex;
+            }
+
+            #menu-icon {
+                display: flex;
+            }
+
+            nav a {
+                display: none;
+                margin: 10px;
+            }
+        }
 </style>
        
