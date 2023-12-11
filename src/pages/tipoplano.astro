@@ -6,12 +6,15 @@ import Categorias from "../components/categorias.astro"
 ---
 <Layout {title}>
 
+  <!-- SECCION PARA TIPOS DE GORRAS PLANAS -->
     <section>
         <div id="nuestroproductos">
-          <h2 id="tituloproductos">Gorras SnapBack : </h2>
+          <h2 id="tituloproductos">Gorras Tipo SnapBack : </h2>
         </div>
         <div id="contenedormaintarjetas" class="tarjetas-flex">
+          <!-- CONTENEDOR PARA LOS COMPONENTES -->
             <div>
+              <!-- AÑADIMOS LOS COMPONENTES TARJETAS CON LOS DIFERENTES PROPS -->
                 <Tarjeta img="../assets/gorras/snapback/12814_1.avif" titulo="New Era" contenido="Recycled 66 Classic Hat Black Adjustable - New Era" precio="26,99" />
               </div>
               <div>
@@ -45,8 +48,14 @@ import Categorias from "../components/categorias.astro"
         #nuestroproductos {
           width: 70%;
         }
+        #tituloproductos{
+          margin-left:10%;
+          margin-top:7%;
+          margin-bottom:5%
+        }
       
         #contenedormaintarjetas {
+           /*TIPO FLEX PARA EL CONTENEDOR DE LAS TARJETAS */
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -59,9 +68,10 @@ import Categorias from "../components/categorias.astro"
         }
       
         @media (max-width: 767px) {
-          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          /* RESPONSIVE PARA LA PAGINA  */
           #contenedormaintarjetas > div {
-            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+            /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+            width: calc(100% - 20px); 
           }
         }
       </style>

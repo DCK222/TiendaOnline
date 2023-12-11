@@ -1,10 +1,14 @@
 ---
 const {img,contenido,titulo} = Astro.props;
 ---
+<!-- CREAMOS OTRO COMPONENTE CATEGORIA -->
 <div id="tarjeta2" class="tarjeta">
+  <!--PARA PODER IMPORTAR LAS IMAGENES -->
     <img id="imagen2" class="imagen" src={img} alt="Imagen de la tarjeta">
     <div id="contenido2" class="contenido">
+      <!-- PARA IMPORTAR EL TITULO -->
       <h3 id="titulo2" class="titulo">{titulo}</h3>
+      <!-- PARA CARGAR EL CONTENIDO DEL COMPONENTE -->
       <p>{contenido}</p>
     </div>
   </div>
@@ -42,6 +46,7 @@ color: black;
       font-weight: bold;
       margin-bottom: 10px;
     }
+    /* RESPONSIVE PARA LA PAGINA  */
     @media (max-width: 900px) {
     #imagen2{
         width: 250px;

@@ -7,11 +7,14 @@ import Categorias from "../components/categorias.astro"
 ---
 
 <Layout {title}>
+  <!-- HTML DEL BANNER -->
   <div id="banner">
     <div id="titulo">
       <h1>Estilo que se lleva en la cabeza</h1>
     </div>
+    
     <div id="imagenbanner">
+      <!-- IMAGENES DEL BANNER -->
       <img id="gorra1"
         src="assets/398956637_1102980074024756_4853971165764625905_n-removebg-preview.png"
         alt=""
@@ -29,11 +32,16 @@ import Categorias from "../components/categorias.astro"
   
   <section class="page-section" id="servicios">
     <div class="container">
+      <!-- CONTENEDOR DE LOS SERVIVICOS -->
+      <!-- TITULO DE LOS SERVICIOS  -->
         <div id="nuestrosservicios" class="text-center">
             <h2 class="section-heading text-uppercase">Nuestros Servicios</h2>
             <h3 id="idgorras" class="section-subheading text-muted"> Gorras que Hablan por Ti</h3>
         </div>
+      
+        
         <div class="row text-center">
+          <!-- PRIMER CONTENEDOR -->
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -43,6 +51,7 @@ import Categorias from "../components/categorias.astro"
                 <h4 class="my-3">Envíos en de 48 Horas</h4>
                 <p class="text-muted">Descubre la eficiencia de nuestros servicios de envío exprés que te garantizan la entrega de tus paquetes en menos de 48 horas.</p>
             </div>
+            <!-- SEGUNDO CONTENEDOR -->
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -52,6 +61,7 @@ import Categorias from "../components/categorias.astro"
                 <h4 class="my-3">Envíos Internacionales Sin Fronteras</h4>
                 <p class="text-muted">Conquista nuevos horizontes con nuestros servicios de envíos internacionales. En DcKap, facilitamos el proceso de enviar tus productos a cualquier rincón del mundo.</p>
             </div>
+            <!-- TERCER CONTENEDOR  -->
             <div class="col-md-4">
                 <span class="fa-stack fa-4x">
                     <i class="fas fa-circle fa-stack-2x text-primary"></i>
@@ -64,12 +74,15 @@ import Categorias from "../components/categorias.astro"
         </div>
     </div>
 </section>
+
+<!-- SECCION DE LOS PRODUCTOS -->
 <section>
   <div id="nuestroproductos">
   <h2 id="tituloproductos">Nuestros Productos :</h2>
   </div>
   <div id="contenedormaintarjetas">
   <div id="contenedortarjetas">
+    <!-- AÑADIMOS EL COMPONENTE TARJETA Y LE PONEMOS LOS DIFERENTES PROPTS IMG, TITULO, CONTENIDO -->
     <div id="">
       <Tarjeta img="assets/gorras/193234074845_1.avif" titulo="47 Brand" contenido="Boston Red Sox Raised Basic Mvp Navy Adjustable - 47 Brand" precio="39,40" />
     </div>
@@ -92,12 +105,15 @@ import Categorias from "../components/categorias.astro"
   </div>
 </div>
 <section/>
+<!-- SECCION TIPO DE GORRAS, 3 CAJAS  -->
 <section id="tiposdegorras">
   <div id="nuestroproductos">
     <h2 id="tituloproductos">Tipos de gorras</h2>
     </div>
     <div id="contenedormaintarjetas">
+      <!-- CONTENEDOR PARA LAS TARJETAS -->
     <div id="contenedortarjetastipos">
+      <!-- AÑADIMOS LAS IMAGENES CON UN <A HREF=""> Y DENTRO UNA IMAGEN  -->
       <a href="tipoplano"> <img width="300px" src="assets/snapback_basic_332x332.webp" alt=""></a>
       <a href="tipotrucker"><img width="300px" src="assets/Mesa_de_trabajo_6-100_332x332.webp" alt=""></a>
         <a href="tipoajustable"> <img width="300px" src="assets/curved_visor_332x332.webp" alt=""></a>
@@ -106,13 +122,16 @@ import Categorias from "../components/categorias.astro"
     </div>
   </div>
 </section>
+<!-- SECCION PARA LAS MARCAS DE LAS GORRAS 3 SECCIONES (GOORINBROS, THE NORTH FACE, NEW ERA) -->
 <section id="marcasgorras" >
   <div id="nuestroproductos">
   <h2 id="tituloproductos">Marcas de Gorras :</h2>
   </div>
+  <!-- CONTENEDOR DE LAS TARJETAS -->
   <div id="contenedormaintarjetas">
   <div id="contenedortarjetas">
     <div id="">
+      <!-- AÑADIMOS UN NUEVO COMPONENTE PARA AÑADIR LA IMAGEN CON EL NOMBRE (CATEGORIAS) -->
       <a href="newera"><Categorias img="assets/marcas/new-era-logo.svg" titulo="New Era" /></a>
     </div>
     <div id="">
@@ -128,12 +147,14 @@ import Categorias from "../components/categorias.astro"
 
 
 </section>
+<!-- FINALMENTE AÑADIMOS OTRA SECCION CON IMAGENES DE LAS REDES SOCIALES DE LA WEB -->
 <section id="fotosinsta">
   <div id="nuestroproductos">
     <h2 id="tituloproductos">Fotos Instagram</h2>
     </div>
     <div id="contenedormaintarjetas">
     <div id="contenedortarjetas">
+      <!-- CONTENEDOR DE LAS IMAGENES -->
       <img width="300px" src="assets/369877562_1416346055585250_3145208483507793088_n.jpg" alt="">
       <img width="300px" src="assets/405794255_3554907144794427_3552658486012645399_n.jpg" alt="">
       <img width="300px" src="assets/399301868_6714830661939302_851356774131000075_n.jpg" alt="">
@@ -152,14 +173,15 @@ import Categorias from "../components/categorias.astro"
 <style>
   
   #botonvertodos{
-
     color: aliceblue;
   }
   #botonvertodos a {
+    /* PARA QUITAR EL SUBRAYADO AZUL  */
         text-decoration: none;
-        color: inherit; /* Puedes usar 'inherit' para heredar el color del texto del botón */
+        color: inherit; 
     }
     body{
+      /* ESTILOS PARA TODO EL BODY */
         overflow: auto;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
@@ -175,13 +197,12 @@ import Categorias from "../components/categorias.astro"
     }
     #nuestroproductos{
       width: 100%;
-      /* border-bottom: 2px solid #000;
-      padding: 0 10px; */
     }
     #tituloproductos{
       margin-left: 7%;
     }
     #contenedortarjetas{
+      /* HACEMOS FLEX PARA COLOCAR BIEN LAS IMAGENES */
       width: 75%;
       display: flex;
       align-items: center;
@@ -197,8 +218,9 @@ import Categorias from "../components/categorias.astro"
       flex-wrap: wrap;
     }
     #contenedortarjetas > div {
-  width: calc(33.33% - 20px); /* Ajusta el ancho según tus preferencias y considera el margen entre las tarjetas */
-  margin: 10px; /* Ajusta el margen según tus preferencias */
+      /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+  width: calc(33.33% - 20px); 
+  margin: 10px; 
 }
 #contenedormaintarjetas{
   width: 100%;
@@ -253,6 +275,7 @@ import Categorias from "../components/categorias.astro"
   width: 300px;
 }
 #contenedortarjetas > div {
+  /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
     width: calc(65% - 20px);
   }
     }
@@ -263,8 +286,10 @@ import Categorias from "../components/categorias.astro"
   #fotosinsta{
     margin-bottom: 5%;
   }
+  /* FIN ESTILOS DEL HEADER */
   /* ------------------------------------------------------- */
   #contendorservicios{
+    /* ESTILOS PARA EL CONTENEDOR */
     display: flex;
     align-items: center;
     justify-content: center;

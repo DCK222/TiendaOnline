@@ -6,13 +6,15 @@ import Categorias from "../components/categorias.astro"
 ---
 <Layout {title}>
 
-
+<!-- SECCION PARA GORRAS DE TIPO TRUCKER -->
     <section>
         <div id="nuestroproductos">
-          <h2 id="tituloproductos">Gorras Trucker :</h2>
+          <h2 id="tituloproductos">Gorras Tipo Trucker :</h2>
         </div>
+        <!-- CONTENEDOR PARA LOS COMPONENTES -->
         <div id="contenedormaintarjetas" class="tarjetas-flex">
             <div>
+                <!-- AÑADIMOS COMPONENTES PARA LAS TARJETAS -->
                 <Tarjeta img="assets/gorras/goorinbros/090625451028_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Black Adjustable - Goorin Bros" precio="26,99" />
               </div>
               <div>
@@ -50,12 +52,15 @@ import Categorias from "../components/categorias.astro"
         #tituloproductos{
             margin-top:3%
         }
-        #nuestroproductos {
-          width: 70%;
-          margin-top:3%
+      
+        #tituloproductos{
+          margin-left:5%;
+          margin-top:7%;
+          margin-bottom:5%
         }
       
         #contenedormaintarjetas {
+             /*TIPO FLEX PARA EL CONTENEDOR DE LAS TARJETAS */
           width: 100%;
           display: flex;
           flex-wrap: wrap;
@@ -68,9 +73,10 @@ import Categorias from "../components/categorias.astro"
         }
       
         @media (max-width: 767px) {
-          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          /* RESPONSIVE PARA LAS TARJETAS */
           #contenedormaintarjetas > div {
-            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+            /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+            width: calc(100% - 20px); 
           }
         }
       </style>

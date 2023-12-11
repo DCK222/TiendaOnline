@@ -7,10 +7,12 @@ import Categorias from "../components/categorias.astro"
 <Layout {title}>
 
     <section>
+      <!-- SECCION PARA EL APARTADO GOORIN BROS  -->
         <div id="nuestroproductos">
-          <h2 id="tituloproductos">The Goorin Bros :</h2>
+          <h2 id="tituloproductos"> Productos The Goorin Bros :</h2>
         </div>
         <div id="contenedormaintarjetas" class="tarjetas-flex">
+          <!-- AÑADIMOS EL COMPONENTE DE LAS TARJETAS AÑADIENDO LOS DIFERENTES PROPTS -->
             <div>
                 <Tarjeta img="assets/gorras/goorinbros/090625451028_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Black Adjustable - Goorin Bros" precio="26,99" />
               </div>
@@ -48,30 +50,37 @@ import Categorias from "../components/categorias.astro"
                 <Tarjeta img="assets/gorras/goorinbros/HS1016836_1.avif" titulo="Goorin Bros" contenido="The Goat Coral Trucker - Goorin Bros" precio="19,40" />
               </div>
         </div>
-        <!-- <button id="botonvertodos" type="button" class="btn btn-primary"> <a href="todasgorras">Ver Todos</a></button> -->
+       
       </section>
       
       <style>
         #nuestroproductos {
           width: 70%;
         }
+        #tituloproductos{
+          margin-left:10%;
+          margin-top:7%;
+          margin-bottom:5%
+        }
       
         #contenedormaintarjetas {
+          /* ESTILOS PARA EL CONTENEDOR DE LAS TARJETAS CON FLEX  */
           width: 100%;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          gap: 20px; /* Espacio entre tarjetas */
+          /* ESPACIO ENTRE LAS TARJETAS */
+          gap: 20px; 
         }
       
         #contenedormaintarjetas > div {
-          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+          width: calc(33.33% - 20px); 
         }
       
         @media (max-width: 767px) {
-          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          
           #contenedormaintarjetas > div {
-            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+            width: calc(100% - 20px); 
           }
         }
       </style>

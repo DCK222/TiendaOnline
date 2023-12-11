@@ -3,11 +3,15 @@ const {img,contenido,titulo,precio} = Astro.props;
 ---
 
 <div id="tarjeta" class="tarjeta">
+  <!-- AÑADIMOS PARA QUE SE PUEDAN IMPORTAR LAS IMAGENES-->
     <img id="imagen" class="imagen" src={img} alt="Imagen de la tarjeta">
     <div id="contenido" class="contenido">
+      <!-- IMPORTAMOS PARA QUE SE PUEDA AÑADIR TITULO A LA TAEJTEA -->
       <h3 id="titulo" class="titulo">{titulo}</h3>
+      <!-- IMPORTAMOS PARA PODER AÑADIR EL CONTENIDO -->
       <p>{contenido}</p>
       <div id="seciconcarrito">
+        <!-- AÑADIMOS PARA PODER INTRODUCIR SECCION PRECIO -->
       <h3 id="precio">{precio}</h3>
       <button id="botoncarro"><img width="25px" src="assets/carro-de-la-carretilla (1).png" alt=""></button>
     </div>

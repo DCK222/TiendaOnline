@@ -6,11 +6,13 @@ import Categorias from "../components/categorias.astro"
 ---
 <Layout {title}>
 
+  <!-- SECCION PARA LAS GORRAS DE LA MARCA NEW ERA -->
     <section>
         <div id="nuestroproductos">
-          <h2 id="tituloproductos">New Era :</h2>
+          <h2 id="tituloproductos">Productos New Era :</h2>
         </div>
         <div id="contenedormaintarjetas" class="tarjetas-flex">
+           <!-- AÑADIMOS EL COMPONENTE DE LAS TARJETAS AÑADIENDO LOS DIFERENTES PROPTS -->
             <div>
                 <Tarjeta img="assets/gorras/newera/195131198105_1.avif" titulo="New Era" contenido="Recycled 66 Classic Hat Black Adjustable - New Era" precio="26,99" />
               </div>
@@ -52,26 +54,35 @@ import Categorias from "../components/categorias.astro"
       </section>
       
       <style>
+        #tituloproductos{
+          margin-left:10%;
+          margin-top:7%;
+          margin-bottom:5%
+        }
         #nuestroproductos {
           width: 70%;
         }
       
         #contenedormaintarjetas {
+           /*TIPO FLEX PARA EL CONTENEDOR DE LAS TARJETAS */
           width: 100%;
           display: flex;
           flex-wrap: wrap;
           justify-content: space-between;
-          gap: 20px; /* Espacio entre tarjetas */
+          /* Espacio entre tarjetas */
+          gap: 20px; 
         }
       
         #contenedormaintarjetas > div {
-          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+          /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+          width: calc(33.33% - 20px); 
         }
       
         @media (max-width: 767px) {
-          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          
           #contenedormaintarjetas > div {
-            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+            /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+            width: calc(100% - 20px); 
           }
         }
       </style>

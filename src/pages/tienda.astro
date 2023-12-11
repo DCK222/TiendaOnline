@@ -7,12 +7,16 @@ import TarjetaTienda from "../components/tarjetaTienda.astro";
 ---
 <Layout {title}>
 
+  <!-- SECCION PARA LA TIENDA -->
     <section>
+      <!-- CREAMOS UN APARTADO PARA EL TITULO -->
         <div id="nuestroproductos">
           <h2 id="tituloproductos">Productos Añadidos :</h2>
         </div>
+        <!-- AÑADIMOS OTRO CONTENEDOR PARA LAS TARJETAS -->
         <div id="contenedormaintarjetas" class="tarjetas-flex">
             <div>
+              <!-- AÑADIMOS COMPONENTE TARJETAS AÑADIENDO LOS DIFERENTES PROPTS -->
                 <TarjetaTienda img="assets/gorras/goorinbros/090625451028_1.avif" titulo="Goorin Bros" contenido="Recycled 66 Classic Hat Black Adjustable - Goorin Bros" precio="26,99" />
               </div>
               <div>
@@ -46,6 +50,7 @@ color: aliceblue;
         }
       
         #contenedormaintarjetas {
+           /*TIPO FLEX PARA EL CONTENEDOR DE LAS TARJETAS */
           width: 100%;
           display: flex;
           align-items: center;
@@ -57,13 +62,16 @@ color: aliceblue;
         }
       
         #contenedormaintarjetas > div {
-          width: calc(33.33% - 20px); /* Ajustar el ancho de cada tarjeta con un espacio de 20px entre ellas */
+          /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+          width: calc(33.33% - 20px); 
         }
       
+        /* RESPONSIVE LA PAGINA */
         @media (max-width: 767px) {
-          /* Cambiar el número de tarjetas por fila en pantallas más pequeñas */
+          
           #contenedormaintarjetas > div {
-            width: calc(100% - 20px); /* Una tarjeta por fila en pantallas más pequeñas */
+            /* PARA MANEJAR EL ANCHO Y LOS BORDES DE LAS TARJETAS  */
+            width: calc(100% - 20px); 
           }
         }
       </style>
